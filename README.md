@@ -1,9 +1,27 @@
-## sbt project compiled with Dotty
+## Piece Tour
+A program to find out a tour path for a chess piece from a starting cell position. The contraints for moving the piece are:
+
+a) The piece can move 3 spaces either North, East, South,
+or West.
+
+b) The piece can move 2 spaces diagonally: Northeast,
+Southeast, Southwest, or Northwest.
+
+c) Each space can only be visited once.
 
 ### Usage
 
-This is a normal sbt project, you can compile code with `sbt compile` and run it
-with `sbt run`, `sbt console` will start a Dotty REPL.
+The program takes the starting cell position of the piece, as the command line argument. The cell position is defined as `X` and `Y` coordinate. The program has a `Makefile`
 
-For more information on the sbt-dotty plugin, see the
-[dotty-example-project](https://github.com/lampepfl/dotty-example-project/blob/master/README.md).
+### Test
+
+```
+make test
+```
+
+### Run
+
+To run the program with starting cell as `3,4` run
+```
+make run X=3 Y=4
+```
