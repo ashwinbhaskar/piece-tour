@@ -7,12 +7,12 @@ opaque type XCoordinate = Int
 object XCoordinate:
     private[adt] val error = InvalidXCoordinate("Value should be less than 10 and greater or equal to 0")
     def apply(x: Int): Either[Error, XCoordinate] = 
-        if(x >= 0 && x < 10)
+        if(isValid(x))
             Right(x)
         else
             Left(InvalidXCoordinate("Value should be less than 10 and greater or equal to 0"))
 
-    def isValid(y: Int): Boolean = y >= 0 && y < 10
+    def isValid(x: Int): Boolean = x >= 0 && x < 10
 
     def force(x: Int): XCoordinate = 
         if(isValid(x))
