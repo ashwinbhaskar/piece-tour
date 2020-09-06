@@ -1,1 +1,4 @@
 .metals
+.bloop
+.vscode
+target
